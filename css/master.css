@@ -206,3 +206,9 @@ a:hover {
     width: 90%;
   }
 }
+
+@media only screen and (max-width: 580px) {
+  .title-mobile {
+    font-size: 24px !important;
+  }
+}
