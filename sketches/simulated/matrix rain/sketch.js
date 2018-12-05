@@ -1,17 +1,17 @@
 var font,
-  fontsize = 30,
-  widthFontsize = 30 * 0.55,
-  maxSpeed = 2,
-  minSpeed = 5,
-  maxLength = 30,
-  minLength = 6,
-  density = 1.8,
-  framerate = 60,
-  randomCharChance = 0.1;
+  fontsize,
+  widthFontsize,
+  maxSpeed,
+  minSpeed,
+  maxLength,
+  minLength,
+  density,
+  framerate,
+  randomCharChance;
 var charCodes = ['48', '49', '50', '51', '52', '53', '57', '97', '98', '99', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '43', '44', '45', '46', '47', '61', '37', '34', '39', '35', '38', '95', '40', '41', '44', '46', '59', '58', '63', '33', '92', '124', '123', '125', '60', '62', '91', '93', '94', '126'];
-var rainCols = [];
-var tempCharRainCols = [];
-var tempBrightRainCols = [];
+var tempCharRainCols,
+  rainCols,
+  tempBrightRainCols;
 
 
 function preload() {
@@ -21,6 +21,19 @@ function preload() {
 function setup() {
   var canvas = createCanvas(parseInt(document.getElementById("sketch-container").offsetWidth), parseInt(document.getElementById("sketch-container").offsetHeight));
   canvas.parent("sketch-container");
+  rainCols = [];
+  tempCharRainCols = [];
+  tempBrightRainCols = [];
+  fontsize = document.getElementById("font-size").value;
+  widthFontsize = fontsize * 0.58;
+  maxSpeed = document.getElementById("max-speed").value;
+  minSpeed = document.getElementById("min-speed").value;
+  maxLength = document.getElementById("max-length").value;
+  minLength = document.getElementById("min-length").value;
+  density = document.getElementById("density").value;
+  framerate = document.getElementById("framerate").value;
+  randomCharChance = document.getElementById("random-char-chance").value;
+  print(fontsize,widthFontsize,maxSpeed,minSpeed,maxLength,minLength,density,framerate,randomCharChance);
   textFont(font);
   textSize(fontsize);
   colorMode(HSB, 360, 100, 100, 100);
@@ -56,6 +69,7 @@ function draw() {
     }
     tempBrightRainCols.push(tempList);
   }
+  // print(rainCols);
 }
 
 function matrixOne(x, y, speed, value, position, col) {
@@ -150,4 +164,8 @@ function matrixCol(x, col) {
 
 function windowResized() {
   resizeCanvas(parseInt(document.getElementById("sketch-container").offsetWidth), parseInt(document.getElementById("sketch-container").offsetHeight));
+}
+
+function resetFunc() {
+  setup();
 }

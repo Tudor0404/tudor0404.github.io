@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="icon" href="../../../media/favicon.ico">
-    <link rel="stylesheet" href="../../../css/master.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-    <title>--SKETCH--</title>
-  </head>
-  <body>
-    <header>
-      <div id="title" class="title-mobile">
-        <span>p5.js Sketches - Random Triangles</span>
-      </div>
-      <div id="name">
-        <span>By Tudor Popescu</span>
-      </div>
-    </header>
-    <div class="sketch-content-wrapper">
-      <div class="preview">
-        <div id="sketch-container">
-        </div>
-      </div>
-      <div class="settings">
-        <div class="settings-block">
-          <a href="#" class="settings-block-text">Source code</a>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="icon" href="../../../media/favicon.ico">
+  <link rel="stylesheet" href="../../../css/master.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <title>--SKETCH--</title>
+</head>
+
+<body>
+  <header>
+    <div id="title" class="title-mobile">
+      <span>p5.js Sketches - Random Triangles</span>
+    </div>
+    <div id="name">
+      <span>By Tudor Popescu</span>
+    </div>
+  </header>
+  <div class="sketch-content-wrapper">
+    <div class="preview">
+      <div id="sketch-container">
       </div>
     </div>
-    <script src="sketch.js"></script>
-  </body>
+    <div class="settings">
+      <div class="settings-block">
+        <a href="#" class="settings-block-text">Source code</a>
+      </div>
+      <button type="button" name="button" class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
+      <div class="settings-block">
+        <div class="slider-container">
+          <span class="slider-text">Saturation</span>
+          <input type="range" min="1" max="100" value="75" class="slider" step="1" id="brightness">
+        </div>
+        <div class="slider-container">
+          <span class="slider-text">Offset</span>
+          <input type="range" min="0" max="1" value="0.5" class="slider" step="0.05" id="offset">
+        </div>
+      </div>
+      <div class="settings-block">
+        <span class="settings-block-text-normal">You will have to refresh the <br>sketch to change some variables</span>
+      </div>
+    </div>
+  </div>
+  <script src="sketch.js"></script>
+</body>
+
 </html>

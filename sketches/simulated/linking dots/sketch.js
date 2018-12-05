@@ -1,8 +1,6 @@
-var numPoints = 30;
-var connections = 5; //must be 3 if you it filled
-var points = [];
-var noiseT = [];
-var moveSpeed = 0.001;
+var numPoints;
+var points;
+var noiseT;
 var noiseOffset = 50;
 var scaling = 1.2;
 var filled = false; // make shapes instead of lines
@@ -11,6 +9,10 @@ function setup() {
   var canvas = createCanvas(parseInt(document.getElementById("sketch-container").offsetWidth), parseInt(document.getElementById("sketch-container").offsetHeight));
   canvas.parent("sketch-container");
   // creating points and settings for the random movement
+  points = [];
+  noiseT = [];
+  numPoints = document.getElementById("num-of-dots").value;
+  var moveSpeed = document.getElementById("speed-of-dots").value
   for (var i = 0; i < numPoints; i++) {
     var tempNoiseX = random(-noiseOffset, noiseOffset);
     var tempNoiseY = random(-noiseOffset, noiseOffset);
@@ -30,7 +32,7 @@ function setup() {
 function draw() {
   print('displaying');
   background(0);
-
+  var connections = document.getElementById("connections").value;
   // moving the points
   for (var i = 0; i < numPoints; i++) {
     points[i][0] = width * noise(noiseT[i][0]) * scaling;
@@ -91,4 +93,13 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(parseInt(document.getElementById("sketch-container").offsetWidth), parseInt(document.getElementById("sketch-container").offsetHeight));
+}
+
+function toggleFillFunc() {
+  filled = !filled;
+  document.getElementById("activable-button").classList.toggle("hoverable");
+}
+
+function resetFunc() {
+  setup();
 }
