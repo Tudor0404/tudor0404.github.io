@@ -8,16 +8,16 @@
   <link rel="icon" href="../../../media/favicon.ico">
   <link rel="stylesheet" href="../../../css/master.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-  <title>--SKETCH--</title>
+  <title>Matrix Rain</title>
 </head>
 
 <body>
   <header>
     <div id="title" class="title-mobile">
-      <span>p5.js Sketches - Matrix Rain</span>
+      <a href="../../../index.html" id="title-color">p5.js Sketches - Matrix Rain</a>
     </div>
     <div id="name">
-      <span>By Tudor Popescu</span>
+      <a href="mailto:tudor0404@gmail.com" id="name-span">Tudor Popescu</a>
     </div>
   </header>
   <div class="sketch-content-wrapper">
@@ -27,46 +27,16 @@
     </div>
     <div class="settings">
       <div class="settings-block">
-        <a href="https://github.com/Tudor0404/tudor0404.github.io/blob/master/sketches/simulated/matrix%20rain/sketch.js" class="settings-block-text">Source code</a>
+        <div class="padding-wrapper">
+          <a href="https://github.com/Tudor0404/tudor0404.github.io/blob/master/sketches/simulated/matrix%20rain/sketch.js" class="settings-block-text-normal" target="_blank">Source code</a>
+        </div>
       </div>
       <div class="settings-block">
-        <div class="slider-container">
-          <span class="slider-text">Density</span>
-          <input type="range" min="1.4" max="3" value="1.8" class="slider" step="0.1" id="density">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Font size</span>
-          <input type="range" min="20" max="50" value="30" class="slider" step="1" id="font-size">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Minimum speed</span>
-          <input type="range" min="5" max="10" value="5" class="slider" step="1" id="min-speed">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Maximum speed</span>
-          <input type="range" min="1" max="4" value="2" class="slider" step="1" id="max-speed">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Minimum Length</span>
-          <input type="range" min="3" max="20" value="6" class="slider" step="1" id="min-length">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Maximum Length</span>
-          <input type="range" min="11" max="50" value="30" class="slider" step="1" id="max-length">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Framerate (slows down rain as well)</span>
-          <input type="range" min="30" max="60" value="60" class="slider" step="1" id="framerate">
-        </div>
-        <div class="slider-container">
-          <span class="slider-text">Chance of a random character</span>
-          <input type="range" min="0" max="1" value="0.1" class="slider" step="0.1" id="random-char-chance">
+        <div class="padding-wrapper">
+          <span class="settings-block-text-normal">Because of the nature of this code, <br>you can't change variables and refresh the <br>code without refreshing the page</span>
         </div>
       </div>
-      <button type="button" name="button" class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
-      <div class="settings-block">
-        <span class="settings-block-text-normal">You will have to refresh the <br>sketch to change some variables</span>
-      </div>
+        <button type="button" name="button" class="settings-button hoverable" onclick="refresh()">Click me to resize canvas</button>
     </div>
   </div>
   <script src="sketch.js"></script>

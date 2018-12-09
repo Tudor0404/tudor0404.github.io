@@ -33,6 +33,9 @@ function draw() {
   print('displaying');
   background(0);
   var connections = document.getElementById("connections").value;
+  if (connections-1 >= numPoints) {
+    connections = numPoints - 1;
+  }
   // moving the points
   for (var i = 0; i < numPoints; i++) {
     points[i][0] = width * noise(noiseT[i][0]) * scaling;

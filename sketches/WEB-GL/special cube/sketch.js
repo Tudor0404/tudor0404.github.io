@@ -12,9 +12,9 @@ function draw() {
   boxSize = Math.min(width, height) / 4;
   background(0);
   translate(0, 0, -100);
-  rotateY(frameCount * 0.01);
-  rotateX(frameCount * 0.01);
-  rotateZ(frameCount * 0.01);
+  rotateY(frameCount * 0.01 * document.getElementById("roatationX").value);
+  rotateX(frameCount * 0.01 * document.getElementById("rotationY").value);
+  rotateZ(frameCount * 0.01 * document.getElementById("rotationZ").value);
 
   stroke(255);
   strokeWeight(3);

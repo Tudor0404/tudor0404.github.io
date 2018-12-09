@@ -8,16 +8,16 @@
   <link rel="icon" href="../../../media/favicon.ico">
   <link rel="stylesheet" href="../../../css/master.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-  <title>--SKETCH--</title>
+  <title>Linking Dots</title>
 </head>
 
 <body>
   <header>
     <div id="title" class="title-mobile">
-      <span>p5.js Sketches - Linking Dots</span>
+      <a href="../../../index.html" id="title-color">p5.js Sketches - Linking Dots</a>
     </div>
     <div id="name">
-      <span>By Tudor Popescu</span>
+      <a href="mailto:tudor0404@gmail.com" id="name-span">Tudor Popescu</a>
     </div>
   </header>
   <div class="sketch-content-wrapper">
@@ -27,16 +27,18 @@
     </div>
     <div class="settings">
       <div class="settings-block">
-        <a href="https://github.com/Tudor0404/tudor0404.github.io/blob/master/sketches/simulated/linking%20dots/sketch.js" class="settings-block-text">Source code</a>
+        <div class="padding-wrapper">
+          <a href="https://github.com/Tudor0404/tudor0404.github.io/blob/master/sketches/simulated/linking%20dots/sketch.js" class="settings-block-text-normal" target="_blank">Source code</a>
+        </div>
       </div>
       <div class="settings-block">
         <div class="slider-container">
           <span class="slider-text">Number of dots</span>
-          <input type="range" min="5" max="60" value="30" class="slider" step="1" id="num-of-dots">
+          <input type="range" min="5" max="100" value="30" class="slider" step="1" id="num-of-dots">
         </div>
         <div class="slider-container">
           <span class="slider-text">Speed Of the dots</span>
-          <input type="range" min="0.002" max="0.01" value="75" class="slider" step="0.001" id="speed-of-dots">
+          <input type="range" min="0.002" max="0.01" value="0.003" class="slider" step="0.001" id="speed-of-dots">
         </div>
         <div class="slider-container">
           <span class="slider-text">Connections</span>
@@ -46,7 +48,9 @@
       <button type="button" name="button" class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
       <button type="button" name="button" class="settings-button" id="activable-button" onclick="toggleFillFunc()">Click me to fill shapes</button>
       <div class="settings-block">
-        <span class="settings-block-text-normal">You will have to refresh the <br>sketch to change some variables</span>
+        <div class="padding-wrapper">
+          <span class="settings-block-text-normal">You will have to refresh the sketch to change some variables.</span>
+        </div>
       </div>
     </div>
   </div>

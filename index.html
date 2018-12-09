@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/master.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="icon" href="media/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -13,95 +13,257 @@
 </head>
 
 <body>
+
+
   <header>
     <div id="title">
-      <span>p5.js Sketches</span>
+      <span class="title-color">p5.js Sketches</span>
     </div>
     <div id="name">
-      <span>By Tudor Popescu</span>
+      <a href="mailto:tudor0404@gmail.com" id="name-span">Tudor Popescu</a>
     </div>
   </header>
-  <nav>
-    <div class="text-box">
-      <p> <span class="subtitle">Contents</span> </p>
-    </div>
-  </nav>
-  <div id="content">
-    <div class="box" id="intro">
-      <div class="text-box">
-        <div class="image-container">
-          <img src="media/profile-pic.png" alt="profile pic" id="img-1">
+
+
+  <div id="main-wrapper">
+    <div id="content">
+      <div class="box" id="intro">
+        <div class="text-box">
+          <span class="subtitle">Intro</span>
+          <div class="image-container">
+            <img src="media/profile-pic.png" alt="profile pic" id="img-profile">
+          </div>
+          <p> <br> Welcome to my website, where I will be posting
+            all the worthy p5.js sketches I have produced. If you don't know what p5.js is, it's a
+            javascript library based on processing, a java based library. It is formed on the idea of giving the user
+            creative freedom, by making it easier for the user to interact with javascript, while still
+            being able to use javascript's full potential. If you want to learn more, go to this
+            <a href="https://p5js.org/" target="_blank">site</a>.<br><br> I program using p5.js as a hobby, as I
+            find it intresting and fun. I am mostly using this site to archive and showcase my creations. This site is
+            made to be more practical than beautiful. Please <a href="mailto:tudor0404@gmail.com">message</a> me if you have any comments or questions.</p>
         </div>
-        <p> <span class="subtitle">Intro</span> <br> Welcome to my website, where I will be posting
-          all the worthy p5.js sketches I have produced. If you don't know what p5.js is, it's a
-          javascript libary based on processing, a java based libary. It is formed on the idea of giving the user
-          creative freedom, by making it easier for the user to interact with javascript, while still
-          being able to use javascript's full potential. If you want to learn more, go to this
-          <a href="https://p5js.org/" target="_blank">site</a>.<br><br> I program using p5.js as a hobby, as I
-          find it intresting and fun. I am mostly using this site to archive and showcase my creations.
-          Please mesasge me if you have any comments or questions.</p>
+      </div>
+
+      <div class="box" id="contents-box">
+        <div class="text-box">
+          <span class="subtitle">Contents</span>
+          <ul class="nav-list">
+            <li> <a href="#intro">Intro</a> </li>
+            <li> <a href="#patterns">Patterns</a> </li>
+            <div class="inner-list">
+              <ul>
+                <li> <a href="#colorful-triangles-link">Colorful Triangles</a> </li>
+                <li> <a href="#hexagon-with-lines-link">Hexagon with lines</a> </li>
+                <li> <a href="#metratons-cube-link">Metraton's cube</a> </li>
+                <li> <a href="#random-triangles-link">Random Triangles</a> </li>
+              </ul>
+            </div>
+            <li> <a href="#simulated">Simulated</a> </li>
+            <div class="inner-list">
+              <ul>
+                <li> <a href="#linking-dots-link">Linking dots</a> </li>
+                <li> <a href="#matrix-rain-link">Matrix Rain</a> </li>
+              </ul>
+            </div>
+            <li> <a href="#WEB-GL">WEB-Gl</a> </li>
+            <div class="inner-list">
+              <ul>
+                <li> <a href="#special-cube-link">Special cube</a> </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PATTERNS -->
+      <div class="box content-title subtitle" id="patterns">
+        <span class="title-color">Patterns</span>
+      </div>
+
+      <!-- colorful triangles -->
+      <div class="box" id="colorful-triangles-link">
+        <div class="text-box">
+          <span class="subtitle">Colorful Triangles</span>
+          <a href="sketches/patterns/colorful triangles/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\colorful triangles.png" alt="colorful triangles preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            <br> This was my first ever sketch which
+            I took seriously. It took me a lot of time to complete it as I had to figure a way to draw each
+            triangle accurately. I eventually found a way by plotting a grid of points them linking specific
+            points which were used to create the triangles. I also implemented a functionality which makes you
+            able to change between black and white, and color, as well as changing the saturation and brightness.
+            You are able to refresh the code also, as all the colors are chosen randomly.</p>
+        </div>
+      </div>
+
+      <!-- hexagon with lines -->
+      <div class="box" id="hexagon-with-lines-link">
+        <div class="text-box">
+          <span class="subtitle">Hexagon With Lines</span>
+          <a href="sketches/patterns/hexagon with lines/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\hexagon with lines.png" alt="hexagon with lines preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            <br> Creating this hexagon was more difficult than it seems. Making the actual hexagon was relatively
+            easy, but drawing the lines was quite annoying as I had to have a perfect angle and distance for each line, as
+            it made all the lines look all squished if I used the side length as the top line. <br> <br>
+
+            I tried adding a slider to add more or fewer lines but it started looking very weird when the user changes it,
+            however I can change it in the source code.
+          </p>
+        </div>
+      </div>
+
+      <!-- metraton's cube -->
+      <div class="box" id="metratons-cube-link">
+        <div class="text-box">
+          <span class="subtitle">Metraton's Cube</span>
+          <a href="sketches/patterns/metratons cube/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\metrantons cube.png" alt="metratons cube preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            <br> There is not much to say about this sketch. I made it using the <a href="https://www.tokenrock.com/explain-flower-of-life-46.html" target="_blank"> flower of life</a>
+            pattern. If you don't know what it is, it's just some circles repeated in a specific order, only I did it a
+            little less sophisticated, I only used the not overlapping circles. Then I linked all the circles' centers
+            with each other, creating this pattern called the <a href="https://chemicalmarriage.com/2012/02/02/metatrons-cube-how-to-draw-it/" target="_blank">Metraton's cube</a>
+            which apparently is this symbolic religious pattern. To add a little more bling to this pattern, I made it change color.
+          </p>
+        </div>
+      </div>
+
+      <!-- random triangles -->
+      <div class="box" id="random-triangles-link">
+        <div class="text-box">
+          <span class="subtitle">Random Triangles</span>
+          <a href="sketches/patterns/random triangles/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\random triangles.png" alt="random triangles preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            <br> This sketch was one of the easier ones to complete. It uses the same principal as the sketch with the <a href="#colorful-triangles-link">colorful triangles</a>,
+            except the triangle pattern is simpler and I distorted the points by randomly changing the x and y. I had to zoom in the sketch
+            as I had to cover up the edges as you can see the background, I tried adding points outside the canvas but it didn't work as the program
+            encountered problems when changing the vector of points in the negative and 0 area, which was annoying. Another problem I had,
+            was that when scaling in the picture, <span class="code-snippet">transform(width/s, height/2)</span>
+            didn't work meaning I had to do it manually and I hate that.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- SIMULATED -->
+      <div class="box content-title subtitle" id="simulated">
+        <span class="title-color">Simulated</span>
+      </div>
+
+      <!-- linking dots -->
+      <div class="box" id="linking-dots-link">
+        <div class="text-box">
+          <span class="subtitle">Linking Dots</span>
+          <a href="sketches/simulated/linking dots/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\linking dots.png" alt="linking dots preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            <br> Linking dots was definitely one of the harder sketches to complete, I made it harder on myself for not using
+            classes but I didn't try using them until the <a href="#matrix-rain-link">matrix rain sketch</a>. I spent a lot
+            of time debugging and trying to find solutions to obstacles I had in my way; finding the dots which need to be linked
+            was really hard. As well as all that, it was my first time using <a href="https://en.wikipedia.org/wiki/Perlin_noise" target="_blank">perlin noise</a>,
+            which I used to move around the dots naturally, although it is vastly superior to <span class="code-snippet">random()</span>
+            ,I dislike the fact that perlin noise is not random and is pre-calculated, meaning I had to mess around with the values that control
+            the noise so all the dots don't mimic each other. I saw something similar used on a website (I forgot what it is called) that
+            links your cursor to some falling dots which are behind some shapes, maybe I could do something like that in the future.
+          </p>
+        </div>
+      </div>
+
+      <!-- matrix rain -->
+      <div class="box" id="matrix-rain-link">
+        <div class="text-box">
+          <span class="subtitle">Matrix Rain</span>
+          <a href="sketches/simulated/matrix rain/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\matrix rain.png" alt="matrix rain preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            This was my most ambitious project so far. I used more advanced techniques, analyzed the <a href="https://www.youtube.com/watch?v=SneR61OG4ZI" target="_blank"> real matrix rain</a>
+            and used that as a guideline to what I need to do. Although my code may not look exactly like that, it's because I stepped it down
+            as it was getting very slow when displaying all the characters and randomly generating and seeing if it should use the same character, so it looks like
+            the character stays in the same place, or change the character. I used a third party font file (creadit to <a href="http://www.norfok.com/" target="_blank">Norfok</a> for the file)
+            as I can't get inverted Japanese characters using the standard utf-8 character set. Most tutorials don't make the rain display like in the real thing,
+            they make each column move constantly, instead it should move down one row every set amount of frames or seconds. <br><br>
+
+            I tried adding functionality for the sliders like in some of the other sketches, but do to the nature of the code I wasn't able to do that as if a value
+            change while the code is worked on, it will bring up errors and stop working. Also, I don't think my way of doing it was the most efficient way of doing it.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- WEB-GL -->
+      <div class="box content-title subtitle" id="WEB-GL">
+        <span class="title-color">WEB-GL</span>
+      </div>
+
+      <!-- special cube -->
+      <div class="box" id="special-cube-link">
+        <div class="text-box">
+          <span class="subtitle">Matrix Rain</span>
+          <a href="sketches/WEB-GL/special cube/sketch-html.html">
+            <div class="image-container">
+              <img src="media\sketch previews\special cube.png" alt="special 3D cube preview" class="image-sketch-preview">
+            </div>
+          </a>
+          <p>
+            In this sketch is where I first messed around with the third dimension and WEB-GL. The program itself wasn't as hard to finish, but the visualization part was
+            hard, but I didn get the hang of it further I went as I got used to thinking about where would the points go on the cube in 3D. I didn't put as much effort into
+            this as other sketches, but it still looks cool.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="sidebar">
+      <div class="text-box">
+        <span class="subtitle">Contents</span>
+        <ul class="nav-list">
+          <li> <a href="#intro">Intro</a> </li>
+          <li> <a href="#patterns">Patterns</a> </li>
+          <div class="inner-list">
+            <ul>
+              <li> <a href="#colorful-triangles-link">Colorful Triangles</a> </li>
+              <li> <a href="#hexagon-with-lines-link">Hexagon with lines</a> </li>
+              <li> <a href="#metratons-cube-link">Metraton's cube</a> </li>
+              <li> <a href="#random-triangles-link">Random Triangles</a> </li>
+            </ul>
+          </div>
+          <li> <a href="#simulated">Simulated</a> </li>
+          <div class="inner-list">
+            <ul>
+              <li> <a href="#linking-dots-link">Linking dots</a> </li>
+              <li> <a href="#matrix-rain-link">Matrix Rain</a> </li>
+            </ul>
+          </div>
+          <li> <a href="#WEB-GL">WEB-Gl</a> </li>
+          <div class="inner-list">
+            <ul>
+              <li> <a href="#special-cube-link">Special cube</a> </li>
+            </ul>
+          </div>
+        </ul>
       </div>
     </div>
-
-    <!-- PATTERNS -->
-    <div class="box content-title subtitle" id="patterns">
-      <span>Patterns</span>
-    </div>
-
-    <!-- colorful triangles -->
-    <div class="box">
-      <a href="sketches/patterns/colorful triangles/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
-    <!-- hexagon with lines -->
-    <div class="box">
-      <a href="sketches/patterns/hexagon with lines/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
-    <!-- metraton's cube -->
-    <div class="box">
-      <a href="sketches/patterns/metratons cube/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
-    <!-- random triangles -->
-    <div class="box">
-      <a href="sketches/patterns/random triangles/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
-
-    <!-- SIMULATED -->
-    <div class="box content-title subtitle" id="simulated">
-      <span>Simulated</span>
-    </div>
-
-    <!-- linking dots -->
-    <div class="box">
-      <a href="sketches/simulated/linking dots/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
-    <!-- matrix rain -->
-    <div class="box">
-      <a href="sketches/simulated/matrix rain/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
-
-    <!-- WEB-GL -->
-    <div class="box content-title subtitle" id="WEB-GL">
-      <span>WEB-GL</span>
-    </div>
-
-    <!-- special cube -->
-    <div class="box">
-      <a href="sketches/WEB-GL/special cube/sketch-html.html" target="_blank">TEMP</a>
-
-    </div>
-
   </div>
 </body>
 
