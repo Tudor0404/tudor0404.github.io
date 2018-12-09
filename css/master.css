@@ -455,4 +455,8 @@ a:visited {
   .subtitle {
     font-size: 36px;
   }
+  #img-profile {
+    width: 100%;
+    height: auto;
+  }
 }
