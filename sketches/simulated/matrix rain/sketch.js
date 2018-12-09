@@ -1,17 +1,17 @@
 var font,
   fontsize = 30,
-  widthFontsize = 30 * 0.55,
+  widthFontsize = fontsize * 0.55,
   maxSpeed = 2,
-  minSpeed = 15,
-  maxLength = 40,
-  minLength = 4,
-  density = 2,
+  minSpeed = 6,
+  maxLength = 6,
+  minLength = 30,
+  density = 1.8,
   framerate = 60,
   randomCharChance = 0.1;
 var charCodes = ['48', '49', '50', '51', '52', '53', '57', '97', '98', '99', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '43', '44', '45', '46', '47', '61', '37', '34', '39', '35', '38', '95', '40', '41', '44', '46', '59', '58', '63', '33', '92', '124', '123', '125', '60', '62', '91', '93', '94', '126'];
-var rainCols = [];
-var tempCharRainCols = [];
-var tempBrightRainCols = [];
+var tempCharRainCols = [],
+  rainCols = [],
+  tempBrightRainCols = [];
 
 
 function preload() {
@@ -151,7 +151,10 @@ function matrixCol(x, col) {
 function windowResized() {
   resizeCanvas(parseInt(document.getElementById("sketch-container").offsetWidth), parseInt(document.getElementById("sketch-container").offsetHeight));
 }
+<<<<<<< HEAD
 
 function refresh() {
   location.reload();
 }
+=======
+>>>>>>> 39b10fddf08a2f0e131aed553df9bc6a38e9e51f
