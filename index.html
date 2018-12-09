@@ -7,8 +7,21 @@
   <link rel="stylesheet" href="css/master.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="icon" href="media/favicon.ico">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+        });
+      }
+    });
+  });
+  </script>
   <title>p5.js Sketches</title>
 </head>
 
@@ -48,6 +61,7 @@
         <div class="text-box">
           <span class="subtitle">Contents</span>
           <ul class="nav-list">
+            <li> <a href="#title">Top</a> </li>
             <li> <a href="#intro">Intro</a> </li>
             <li> <a href="#patterns">Patterns</a> </li>
             <div class="inner-list">
@@ -238,6 +252,7 @@
       <div class="text-box">
         <span class="subtitle">Contents</span>
         <ul class="nav-list">
+          <li> <a href="#title">Top</a> </li>
           <li> <a href="#intro">Intro</a> </li>
           <li> <a href="#patterns">Patterns</a> </li>
           <div class="inner-list">
