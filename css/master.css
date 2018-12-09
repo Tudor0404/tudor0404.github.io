@@ -25,11 +25,15 @@
   color: var(--text-color);
 }
 
+html {
+  max-width: 100%;
+}
+
 body {
   /* background-image: url("../media/funky-lines.png");
   background-repeat: repeat; */
   background-color: var(--background-color);
-  margin-bottom: 5%;
+  overflow-x: hidden;
 }
 
 #header {
@@ -422,9 +426,6 @@ a:visited {
     max-width: 100%;
     padding: 0px;
     margin: 0px;
-  }
-  #header {
-    width: 100vw;
   }
   .box {
     width: 100%;
