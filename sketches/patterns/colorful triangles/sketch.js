@@ -130,3 +130,7 @@ function toggleBNWFunc() {
   bnw = !bnw;
   document.getElementById("activable-button").classList.toggle("hoverable");
 }
+
+function refresh() {
+  location.reload();
+}

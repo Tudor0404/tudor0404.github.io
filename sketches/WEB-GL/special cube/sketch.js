@@ -53,3 +53,7 @@ function draw() {
 function windowResized() {
   resizeCanvas(parseInt(document.getElementById("sketch-container").offsetWidth), parseInt(document.getElementById("sketch-container").offsetHeight));
 }
+
+function refresh() {
+  location.reload();
+}

@@ -43,3 +43,7 @@ function draw() {
 function resetFunc() {
   redraw();
 }
+
+function refresh() {
+  location.reload();
+}

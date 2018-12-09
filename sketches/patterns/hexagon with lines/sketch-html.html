@@ -32,6 +32,11 @@
         </div>
       </div>
       <div class="settings-block">
+        <div class="padding-wrapper">
+          <a href="../../../index.html" class="settings-block-text-normal">Go back</a>
+        </div>
+      </div>
+      <div class="settings-block">
         <div class="slider-container">
           <span class="slider-text">Scale speed multiplier</span>
           <input type="range" min="0" max="8" value="0" class="slider" step="0.5" id="scale-speed-multiplier">
@@ -41,6 +46,7 @@
           <input type="range" min="0" max="8" value="1" step="0.2" class="slider" id="rotation-speed-multiplier">
         </div>
       </div>
+      <button class="settings-button hoverable" onclick="refresh()">Click me to reset settings</button>
     </div>
   </div>
   <script src="sketch.js"></script>

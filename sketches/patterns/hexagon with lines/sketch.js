@@ -59,3 +59,7 @@ function windowResized() {
     points.push([tempX, tempY]);
   }
 }
+
+function refresh() {
+  location.reload();
+}

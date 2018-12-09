@@ -106,3 +106,7 @@ function toggleFillFunc() {
 function resetFunc() {
   setup();
 }
+
+function refresh() {
+  location.reload();
+}

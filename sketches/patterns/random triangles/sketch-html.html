@@ -31,7 +31,11 @@
           <a href="https://github.com/Tudor0404/tudor0404.github.io/blob/master/sketches/patterns/random%20triangles/sketch.js" class="settings-block-text-normal" target="_blank">Source code</a>
         </div>
       </div>
-      <button type="button" name="button" class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
+      <div class="settings-block">
+        <div class="padding-wrapper">
+          <a href="../../../index.html" class="settings-block-text-normal">Go back</a>
+        </div>
+      </div>
       <div class="settings-block">
         <div class="slider-container">
           <span class="slider-text">Saturation</span>
@@ -42,6 +46,8 @@
           <input type="range" min="0" max="1" value="0.5" class="slider" step="0.05" id="offset">
         </div>
       </div>
+      <button class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
+      <button class="settings-button hoverable" onclick="refresh()">Click me to reset settings</button>
       <div class="settings-block">
         <div class="padding-wrapper">
           <span class="settings-block-text-normal">You will have to refresh the <br>sketch to change some variables</span>

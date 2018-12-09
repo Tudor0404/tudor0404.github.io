@@ -33,6 +33,11 @@
         </div>
       </div>
       <div class="settings-block">
+        <div class="padding-wrapper">
+          <a href="../../../index.html" class="settings-block-text-normal">Go back</a>
+        </div>
+      </div>
+      <div class="settings-block">
         <div class="slider-container">
           <span class="slider-text">Brightness</span>
           <input type="range" min="1" max="100" value="75" class="slider" step="1" id="brightness">
@@ -42,8 +47,9 @@
           <input type="range" min="1" max="100" value="75" class="slider" step="1" id="saturation">
         </div>
       </div>
-      <button type="button" name="button" class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
-      <button type="button" name="button" class="settings-button hoverable" id="activable-button" onclick="toggleBNWFunc()">Click me to toggle color</button>
+      <button class="settings-button hoverable" onclick="resetFunc()">Click me to refresh</button>
+      <button class="settings-button hoverable" id="activable-button" onclick="toggleBNWFunc()">Click me to toggle color</button>
+      <button class="settings-button" onclick="refresh()">Click me to reset settings</button>
       <div class="settings-block">
         <div class="padding-wrapper">
           <span class="settings-block-text-normal">You will have to refresh the <br>sketch to change some variables</span>
